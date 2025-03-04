@@ -94,8 +94,10 @@ pill {
     background:#202020;
     padding:10px 15px;
     border-radius:20px;
+    display:inline-block;
+    white-space:nowrap;
 }
 
 .pills {
-    background:gray;
+    text-align: left;
 }
