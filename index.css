@@ -10,7 +10,7 @@
   }
 
 body {
-    background: linear-gradient(to bottom, #101010,#102050);
+    background: linear-gradient(0.5turn, #101010,#102050);
     color:white;
     display: flex;
     flex-flow: column;
@@ -20,24 +20,24 @@ body {
     animation: all 0.7s forwards;
     filter: blur(10px);
     opacity:0;
-    margin:0px 30%
+    margin:0px 30%;
+    border-right:1px solid #ffffff20;
+    border-left:1px solid #ffffff20;
 }
 
 .section {
     padding:10px 10px;
-    border-radius:40px;
-    text-align:left;
-    gap:0;
-    user-select:none;
     cursor:pointer;
     transition:var(--jint-transition);
+    border-top:1px solid #ffffff20;
+    border-bottom:1px solid #ffffff20;
+
 }
 
 .section:hover{
     background:#ffffff20;
     box-shadow: 0px 100px 100px #00002040;
-    z-index: 999;
-
+    z-index:999;
 }
 
 h1 {
@@ -47,7 +47,6 @@ h1 {
     width:20vw;
     text-align:left;
     margin-bottom:20px;
-    padding:0px 22px;
 }
 
 @keyframes all {
@@ -62,7 +61,7 @@ h1 {
     margin-bottom:0px;
     font-size:28px;
     transition:var(--jint-transition);
-    padding:12px;
+    padding:16px 16px;
     color:#ffffff80
 }
 
@@ -73,7 +72,7 @@ h1 {
     object-fit:cover;
     transition:var(--jint-transition);
     display:block;
-    border-radius:30px;
+    border-radius:0px;
     filter:blur(15px);
     opacity:0;
     background-color:#101010;
@@ -86,7 +85,7 @@ h1 {
 }
 
 .section:hover .section-text {
-    margin-bottom:10px;
+    margin-bottom:14px;
     color:#ffffff;
 }
 
@@ -103,7 +102,7 @@ pill {
 
 .pills {
     text-align:left;
-    padding:0 22px;
+
 }
 
 .inline-p {
@@ -113,7 +112,7 @@ pill {
 }
 
 h2 {
-    margin:10px 22px;
+    margin:10px 0px;
     opacity:0.5;
     font-weight:450;
     font-size:20px;
