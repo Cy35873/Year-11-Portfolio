@@ -48,6 +48,7 @@ h1 {
     font-weight:550;
     width:20vw;
     text-align:left;
+    margin-bottom:20px;
 }
 
 @keyframes all {
@@ -96,6 +97,7 @@ pill {
     border-radius:20px;
     display:inline-block;
     white-space:nowrap;
+    margin-right:3px;
 }
 
 .pills {
