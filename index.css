@@ -1,8 +1,54 @@
 /* inter */
 :root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    font-family:Inter, sans-serif;
+    font-feature-settings:'liga' 1, 'calt' 1; /* fix for Chromium */
   }
   @supports (font-variation-settings: normal) {
     :root { font-family: InterVariable, sans-serif; }
   }
+
+body {
+    background:#101010;
+    color:white;
+    text-align:center;
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;  /* Vertically center */
+    height: 100vh;  /* Full viewport height */
+    margin: 0;
+}
+
+.section {
+    background:#202020;
+    padding:20px 20px;
+    border-radius:35px;
+    text-align:left;
+    gap:0;
+}
+
+p {
+    margin:0;
+    margin-bottom:0px;
+    font-size:24px;
+    transition:all 0.5s cubic-bezier(0.144, 0.727, 0.27, 1);
+}
+
+.section-img {
+    width:200px;
+    height:0px;
+    object-fit:cover;
+    transition:all 0.5s cubic-bezier(0.144, 0.727, 0.27, 1);
+    display:block;
+    border-radius:15px;
+    filter:blur(5px);
+}
+
+.section:hover .section-img {
+    height:100px;
+    filter:blur(0px);
+}
+
+.section:hover p {
+    margin-bottom:10px;
+}
+
