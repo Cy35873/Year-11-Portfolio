@@ -10,17 +10,16 @@
   }
 
 body {
-    background: linear-gradient(0.5turn, #101010,#102050);
+    background: linear-gradient(0.5turn, #101010,#001a40);
     color:white;
     display: flex;
     flex-flow: column;
-    justify-content: center;  /* Horizontally center */
-    margin: 0;
     height:100vh;
+    justify-content: center;
     animation: all 0.7s forwards;
     filter: blur(10px);
     opacity:0;
-    margin:0px 30%;
+    margin:0 30%;
     border-right:1px solid #ffffff20;
     border-left:1px solid #ffffff20;
 }
@@ -30,23 +29,26 @@ body {
     cursor:pointer;
     transition:var(--jint-transition);
     border-top:1px solid #ffffff20;
-    border-bottom:1px solid #ffffff20;
-
 }
 
 .section:hover{
-    background:#ffffff20;
+    background:#ffffff10;
     box-shadow: 0px 100px 100px #00002040;
     z-index:999;
+    border-top:1px solid #00000000;
 }
 
 h1 {
-    font-size:70px;
-    margin:0;
+    font-size:100px;
+    margin-top:0;
     font-weight:550;
-    width:20vw;
     text-align:left;
     margin-bottom:20px;
+    font-family:'host grotesk';
+    background: linear-gradient(0.5turn, white, #ffffff80);
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height:1.2;
 }
 
 @keyframes all {
@@ -72,7 +74,6 @@ h1 {
     object-fit:cover;
     transition:var(--jint-transition);
     display:block;
-    border-radius:0px;
     filter:blur(15px);
     opacity:0;
     background-color:#101010;
@@ -90,14 +91,13 @@ h1 {
 }
 
 pill {
-    background:#ffffff20;
+    background:#ffffff10;
     padding:10px 15px;
     border-radius:20px;
     display:inline-flex;
     white-space:nowrap;
     margin-right:3px;
     text-align:left;
-    margin-bottom:10px;
 }
 
 .pills {
@@ -112,8 +112,35 @@ pill {
 }
 
 h2 {
-    margin:10px 0px;
+    margin:22px 0px;
     opacity:0.5;
     font-weight:450;
-    font-size:20px;
+    font-size:18px;
+}
+
+.info {
+    margin:0;
+    user-select:none;
+}
+
+.loc {
+    height:16px;
+    opacity:0.5;
+    margin-right:5px;
+}
+
+inline-info {
+    display:inline-flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.info:after {
+    content:"·";
+    opacity:0;
+}
+
+.info:hover:after {
+    content:', New Zealand';
+    opacity:1;
 }
