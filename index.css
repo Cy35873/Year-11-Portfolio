@@ -4,6 +4,8 @@
     font-feature-settings:'liga' 1, 'calt' 1; /* fix for Chromium */
 
     --jint-transition:all 0.4s cubic-bezier(0.296, -0.009, 0.147, 1.002);
+    --fast-transition:all 0.2s cubic-bezier(0.114, 0.307, 0.146, 1);
+
   }
   @supports (font-variation-settings: normal) {
     :root { font-family: InterVariable, sans-serif; }
@@ -19,10 +21,10 @@ body {
     animation: all 0.7s forwards;
     filter: blur(10px);
     opacity:0;
-    margin:0 30%;
+    margin:0 20%;
     border-right:1px solid #ffffff20;
     border-left:1px solid #ffffff20;
-}
+}  
 
 .section {
     padding:10px 10px;
@@ -147,4 +149,56 @@ inline-info {
 .info:hover:after {
     content:', New Zealand';
     opacity:1;
+}
+
+.button {
+    text-decoration: none;
+    width:fit-content;
+    padding:15px 15px;
+    padding-right:18px;
+    font-size:20px;
+    border-radius:100px;
+    align-items:center;
+    transition:var(--fast-transition);
+    border:1px solid #ffffff20;
+    display:flex;
+    color:white;
+}
+
+.white-button {
+    background:white;
+    color:black;
+    border:none;
+}
+
+.external:after {
+    content:'↗';
+    font-size:0;
+    filter:blur(6px);
+    transition:var(--jint-transition);
+}
+
+.external:hover:after {
+    content:'↗';
+    opacity:1;
+    font-size:20px;
+    filter:blur(0px);
+}
+
+.button-icon {
+    margin-right:6px;
+}
+
+.buttons {
+    display:inline-flex;
+    gap:10px;
+}
+
+.para {
+    font-size:18px;
+    line-height:1.4;
+}
+
+.inline-para-img {
+    height:15px;
 }
