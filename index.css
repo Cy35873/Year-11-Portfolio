@@ -5,6 +5,11 @@
 
     --jint-transition:all 0.4s cubic-bezier(0.296, -0.009, 0.147, 1.002);
     --fast-transition:all 0.2s cubic-bezier(0.114, 0.307, 0.146, 1);
+    --primary-overlay:#ffffff0a;
+    --secondary-overlary:#ffffff20;
+    --null:#00000000;
+    --body:#ffffff;
+    --background:#101010;
 
   }
   @supports (font-variation-settings: normal) {
@@ -17,27 +22,26 @@ body {
     display: flex;
     flex-flow: column;
     height:100vh;
-    justify-content: center;
     animation: all 0.7s forwards;
     filter: blur(10px);
     opacity:0;
     margin:0 30%;
-    border-right:1px solid #ffffff20;
-    border-left:1px solid #ffffff20;
+    border-right:1px solid var(--secondary-overlary);
+    border-left:1px solid var(--secondary-overlary);
 }  
 
 .section {
-    padding:10px 10px;
+    padding:10px;
     cursor:pointer;
     transition:var(--jint-transition);
-    border-top:1px solid #ffffff20;
+    border-top:1px solid var(--secondary-overlary);
 }
 
 .section:hover{
-    background:#ffffff10;
+    background:var(--primary-overlay);
     box-shadow: 0px 100px 200px #00002060;
     z-index:999;
-    border-top:1px solid #00000000;
+    border-top:1px solid var(--null);
 }
 
 h1 {
@@ -47,7 +51,7 @@ h1 {
     text-align:left;
     margin-bottom:20px;
     font-family:'host grotesk';
-    background: linear-gradient(0.5turn, white, #ffffff80);
+    background: linear-gradient(0.5turn, var(--body), #ffffff80);
     -webkit-background-clip: text;
     color: transparent;
     line-height:1;
@@ -100,11 +104,11 @@ h2 {
 
 .section:hover .section-text {
     margin-bottom:14px;
-    color:#ffffff;
+    color:var(--body);
 }
 
 pill {
-    background:#ffffff10;
+    background:var(--primary-overlay);
     padding:10px 15px;
     white-space:nowrap;
     text-align:left;
@@ -157,24 +161,29 @@ inline-info {
     padding:15px 15px;
     padding-right:18px;
     font-size:20px;
-    border-radius:100px;
+    border-radius:1000px;
     align-items:center;
     transition:var(--fast-transition);
-    border:1px solid #ffffff20;
+    border:1px solid var(--primary-overlay);
     display:flex;
-    color:white;
+    color:var(--body);
+}
+
+.button:hover:not(.white-button) {
+    background:var(--primary-overlay);
+    border:1px solid var(--null);
 }
 
 .white-button {
-    background:white;
-    color:black;
+    background:var(--body);
+    color:var(--background);
     border:none;
 }
 
 .external:after {
     content:'↗';
     font-size:0;
-    filter:blur(4px);
+    filter:blur(2px);
     transition:var(--jint-transition);
 }
 
@@ -195,10 +204,15 @@ inline-info {
 }
 
 .para {
-    font-size:18px;
+    font-size:20px;
     line-height:1.4;
+    align-items:first baseline;
 }
 
 .inline-para-img {
     height:15px;
+}
+
+a {
+    text-decoration: none;
 }
