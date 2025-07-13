@@ -1,3 +1,4 @@
+
 /* inter */
 :root {
     font-family:Inter, sans-serif;
@@ -17,14 +18,11 @@
   }
 
 body {
-    background: linear-gradient(0.5turn, #101010,#002034);
+    background: #101010;
     color:white;
     display: flex;
     flex-flow: column;
     height:100vh;
-    animation: all 0.7s forwards;
-    filter: blur(10px);
-    opacity:0;
     margin:0 30%;
     border-right:1px solid var(--secondary-overlary);
     border-left:1px solid var(--secondary-overlary);
@@ -113,7 +111,7 @@ pill {
     white-space:nowrap;
     text-align:left;
     cursor:default;
-    margin:7px 5px 0px 0px;
+    margin:20px 5px 0px 0px;
     display:inline-flex;
     border-radius:100px;
 }
@@ -164,7 +162,7 @@ inline-info {
     border-radius:1000px;
     align-items:center;
     transition:var(--fast-transition);
-    border:1px solid var(--primary-overlay);
+    border:1px solid #303030;
     display:flex;
     color:var(--body);
 }
@@ -215,4 +213,32 @@ inline-info {
 
 a {
     text-decoration: none;
+}
+
+.back{
+    padding:100px 0px 20px 20px;
+    font-size:24px;
+    border-bottom:1px solid var(--secondary-overlary);
+    align-items:center;
+    display:flex;
+    gap:10px;
+    user-select:none;
+    cursor:pointer;
+}
+
+.back:after{
+    content:" Home";
+    opacity:0;
+    transition:var(--fast-transition);
+}
+
+.back:hover:after{
+    font-size:24px;
+    opacity:1;
+}
+
+.real-p {
+    color:#ffffffc0;
+    line-height:150%;
+    font-size:20px;
 }
